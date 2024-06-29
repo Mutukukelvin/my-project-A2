@@ -1,0 +1,11 @@
+# Ignore SQLite database
+db.sqlite3
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore any other files or directories not relevant to code (customize as needed)
+.vscode/
+__pycache__/
+*.pyc
