@@ -1,0 +1,18 @@
+{% extends 'banks/home.html' %}
+
+{% block content %}
+  <h1>List of Banks</h1>
+  <ul>
+    {% for bank in banks %}
+      <li><a href="/banks/{{ bank.id }}/details">{{ bank.name }}</a> {{ bank.inst_num }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
+
+
+
+
+
+

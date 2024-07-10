@@ -1,0 +1,20 @@
+{% extends 'accounts/home.html' %}
+
+{% block content%}
+<body>
+    <h1>Edit Profile</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="email" name="email" value="{{ email }}" placeholder="Email">
+        <input type="text" name="first_name" value="{{ first_name }}" placeholder="First Name">
+        <input type="text" name="last_name" value="{{ last_name }}" placeholder="Last Name">
+        <input type="password" name="password1" placeholder="New Password">
+        <input type="password" name="password2" placeholder="Confirm New Password">
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+
+{% endblock %}

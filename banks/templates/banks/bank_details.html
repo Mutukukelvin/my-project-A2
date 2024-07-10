@@ -1,0 +1,28 @@
+{% extends 'banks/home.html' %}
+
+{% block content %}
+  <h1>{{ bank.name }}</h1>
+  <p>Swift Code: {{ bank.swift_code }}</p>
+  <p>Institution Number: {{ bank.inst_num }}</p>
+  <p>Description: {{ bank.description }}</p>
+
+  <h2>Branches</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Transit Number</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for branch in branches %}
+        <tr>
+          <td>{{ branch.name }}</td>
+          <td>{{ branch.transit_num }}</td>
+          <td>{{ branch.address }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
