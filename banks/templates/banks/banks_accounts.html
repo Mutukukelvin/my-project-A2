@@ -1,15 +1,27 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
 </head>
 <body>
-    <h1>A2 apps:</h1>
+    <div class="header-container">
+        <h1> Explore the A2 apps:</h1>
+    </div>
+    
+ <div class="form-container">
+   
+    <h2>Banks App</h2>
+    <a href="{% url 'banks:home' %}" class="button">View Banks</a>
 
-    <h2>Banks</h2>
-    <a href="{% url 'banks:home' %}">View Banks</a>
+ </div>
 
-    <h2>Accounts</h2>
-    <a href="{% url 'accounts:home' %}">View Accounts</a>
+ <div class="form-container">
+        
+    <h2>Accounts App</h2>
+    <a href="{% url 'accounts:home' %}" class="button">View Accounts</a>
+ </div>
+    
+   
 </body>
 </html>

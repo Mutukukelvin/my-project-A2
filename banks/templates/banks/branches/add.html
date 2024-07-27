@@ -1,15 +1,15 @@
-{% extends 'accounts/home.html' %}
+{% extends 'banks/home.html' %}
 {% load static %}
 
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
 
     <div class="form-container">
-        <h1>Register</h1>
+        <h1>Add Branch</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="button">Register</button>
+            <button type="submit" class="button">Add Branch</button>
         </form>
     </div>
 {% endblock %}

@@ -33,3 +33,12 @@ class RegisterForm(forms.ModelForm):
         if email and not forms.EmailField().clean(email):
             raise forms.ValidationError("Enter a valid email address")
         return email
+    
+    def save(self, commit=True):
+        user = super(RegisterForm, self).save(commit=False)
+        user.set_password(self.cleaned_data["password1"])
+        if commit:
+            user.save()
+        return user
+
+

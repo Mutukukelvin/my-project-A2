@@ -1,18 +1,14 @@
 {% extends 'banks/home.html' %}
 
 {% block content %}
+<div class="form-container">
+
   <h1>List of Banks</h1>
-  <ul>
-    {% for bank in banks %}
-      <li><a href="/banks/{{ bank.id }}/details">{{ bank.name }}</a> {{ bank.inst_num }}</li>
-    {% endfor %}
-  </ul>
+ <ul>
+ <li><a href="/banks/details/41/">Natiomal Bank</a> 001</li>
+ <li><a href="/banks/details/42">BMO</a> 002</li>
+ <li><a href="/banks/details/43">TD</a> 003</li>
+ </ul>
+ </body>
+</div>
 {% endblock %}
-
-
-
-
-
-
-
-

@@ -1,15 +1,17 @@
-{% extends 'accounts/home.html' %}
+{% extends 'banks/home.html' %}
 {% load static %}
 
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
 
     <div class="form-container">
-        <h1>Register</h1>
+        <a href="{% url 'accounts:logout' %}?next=/banks/" class="button logout-button">Logout</a>
+        
+        <h1>Create Bank</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="button">Register</button>
+            <button type="submit" class="button">Submit</button>
         </form>
     </div>
 {% endblock %}

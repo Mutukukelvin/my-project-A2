@@ -21,7 +21,7 @@ from banks import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', views.banks_accounts_view, name='home'),  
+    path('', views.banks_accounts_view, name='home'),# this is my homepage for A2  
 
     path('banks/', include('banks.urls', namespace='banks')),  
 

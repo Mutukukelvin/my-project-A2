@@ -1,0 +1,13 @@
+{% extends 'banks/home.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
+
+    <h1>Edit Branch in {{ bank.name }}</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Save Changes</button>
+    </form>
+{% endblock %}

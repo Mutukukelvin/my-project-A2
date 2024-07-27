@@ -11,6 +11,7 @@ urlpatterns = [
 
     path('logout/', logout_view, name='logout'),
 
+ 
     path('', home, name='home'), 
 
     path('profile/view/', view_profile, name='view_profile'),

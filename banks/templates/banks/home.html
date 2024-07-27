@@ -1,14 +1,30 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
 </head>
 <body>
+    <div class="header-container">
     <h1>Welcome to the Bank App</h1>
+    </div>
     {% block content %}
+
+    <div class="form-container">
+        <h2> Add Bank</h2>
+        <a href="{% url 'banks:add_bank' %}" class="button">Add Bank</a>
+
+    </div>
+
+    <div class="form-container">
+        <h2>List of Banks</h2>
+        <a href="{% url 'banks:list_banks' %}" class="button">View List</a>
+    </div>
+
     
-<a href="{% url 'banks:add_bank' %}">Add Bank</a><br><br>
-<a href="{% url 'banks:add_branch' %}">Add Branch</a>
+    
+   
+   
     {% endblock %}
     
 

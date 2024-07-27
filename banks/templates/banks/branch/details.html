@@ -1,0 +1,17 @@
+{% extends 'accounts/home.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'banks/css/styles.css' %}">
+
+    <h1>Branches of {{ bank.name }}</h1>
+    <ul>
+        {% for branch in branches %}
+            <li>
+                {{ branch.name }}
+                <a href="{% url 'edit_branch' bank_id=bank.id branch_id=branch.id %}">Edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_branch' bank_id=bank.id %}">Add New Branch</a>
+{% endblock %}

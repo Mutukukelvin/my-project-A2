@@ -1,0 +1,81 @@
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px; 
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #699b6d; 
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.button-container .left,
+.button-container .center,
+.button-container .right {
+    flex: 1;
+    text-align: center; 
+}
+
+.button-container .left {
+    text-align: left;
+}
+
+.button-container .right {
+    text-align: right;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+}
+
+
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px; 
+    position: relative;
+    
+}
+
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none; 
+}
+
+
+.Add-New-branch-button {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    text-decoration: none; 
+}
+
+
+
+
+
+
